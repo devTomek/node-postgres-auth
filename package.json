@@ -1,0 +1,16 @@
+{
+	"name": "node-postgres-auth",
+	"version": "0.0.1",
+	"description": "Authentication backend for react-router-auth project",
+	"main": "src/server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"node",
+		"postgresql",
+		"authorisation"
+	],
+	"author": "Tomasz Chybziński",
+	"license": "ISC"
+}
