@@ -1,4 +1,5 @@
 import DB from "./db";
+const router = require("./router");
 
 require("dotenv-defaults").config();
 
@@ -7,6 +8,8 @@ const app = express();
 
 const serverPort = process.env.SERVER_PORT;
 const DBPort = process.env.DB_PORT;
+
+app.use("/api", router);
 
 app.listen(serverPort, async () => {
 	try {
