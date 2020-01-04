@@ -1,3 +1,5 @@
+//todo refactor into ES5
+
 const { Client } = require("pg");
 
 const clientConfig = {
