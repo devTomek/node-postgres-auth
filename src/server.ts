@@ -1,5 +1,4 @@
 import DB from "./db";
-import { Response, Request } from "express";
 
 require("dotenv-defaults").config();
 
