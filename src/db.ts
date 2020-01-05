@@ -1,4 +1,5 @@
 const { Client } = require("pg");
+require("dotenv-defaults").config();
 
 const clientConfig = {
 	host: process.env.DB_HOST,
@@ -11,7 +12,7 @@ const clientConfig = {
 const client = new Client(clientConfig);
 
 const DB = {
-	connect: () => client.connect()
+	client
 };
 
 module.exports = DB;

@@ -18,7 +18,8 @@ app.use("/api", router);
 app.listen(serverPort, async () => {
 	try {
 		console.log(`Server running on port: ${serverPort}`);
-		await DB.connect();
+
+		await DB.client.connect();
 		console.log(`DB running on port: ${DBPort}`);
 	} catch (error) {
 		console.error(error);
