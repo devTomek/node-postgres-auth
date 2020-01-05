@@ -1,12 +1,26 @@
 import { Request, Response } from "express";
-
+const loginService = require("../services/loginService");
 const router = require("express").Router();
 
-router.get("/", (req: Request, res: Response) => {
+router.get("/", async (req: Request, res: Response) => {
 	try {
-		res.status(200).send("Login");
+		const { email, password } = req.body;
+
+		if (!email || !password) {
+			res.sendStatus(400);
+			return;
+		}
+
+		const jwt = await loginService.login(email, password);
+
+		if (jwt === "Unauthorized") {
+			res.sendStatus(401);
+			return;
+		}
+
+		res.send(jwt);
 	} catch (error) {
-		res.status(500).send("Internal Server Error");
+		res.sendStatus(500);
 		console.error(error);
 	}
 });
