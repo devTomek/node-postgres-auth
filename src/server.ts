@@ -1,4 +1,6 @@
-import DB from "./db";
+export {};
+
+const DB = require("./db");
 const router = require("./router");
 
 require("dotenv-defaults").config();

@@ -1,5 +1,3 @@
-//todo refactor into ES5
-
 const { Client } = require("pg");
 
 const clientConfig = {
@@ -16,4 +14,4 @@ const DB = {
 	connect: () => client.connect()
 };
 
-export default DB;
+module.exports = DB;
