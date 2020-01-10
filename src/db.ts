@@ -9,10 +9,6 @@ const clientConfig = {
 	port: process.env.DB_PORT
 };
 
-const client = new Client(clientConfig);
+const db = new Client(clientConfig);
 
-const DB = {
-	client
-};
-
-module.exports = DB;
+module.exports = db;
