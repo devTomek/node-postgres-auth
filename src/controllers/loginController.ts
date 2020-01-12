@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 const loginService = require("../services/loginService");
 const router = require("express").Router();
 
-router.get("/", async (req: Request, res: Response) => {
+router.post("/", async (req: Request, res: Response) => {
 	try {
 		const { email, password } = req.body;
 
