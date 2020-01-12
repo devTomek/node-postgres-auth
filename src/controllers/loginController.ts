@@ -18,7 +18,7 @@ router.post("/", async (req: Request, res: Response) => {
 			return;
 		}
 
-		res.send(jwt);
+		res.send(JSON.stringify(jwt));
 	} catch (error) {
 		res.sendStatus(500);
 		console.error(error);
